@@ -1,4 +1,4 @@
-<%= link_to 'Profile', :lineprofiler => true %>
+<%= link_to 'Profile', request.fullpath + ((request.fullpath =~ /\?/) ? '&' : '?') + 'lineprofiler=true' %>
 <div class="peek-dropdown">
   <ul>
     <li><%= link_to 'app', :lineprofiler => 'app' %></li>
